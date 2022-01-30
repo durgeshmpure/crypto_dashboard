@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class ExpandedcoinCard extends StatelessWidget {
   final String logo;
   final double change;
   final String coinTitle;
   final String coinShort;
   final String balance;
-  ExpandedcoinCard(
+  const ExpandedcoinCard(
       this.change, this.logo, this.coinTitle, this.coinShort, this.balance);
   @override
   Widget build(BuildContext context) {

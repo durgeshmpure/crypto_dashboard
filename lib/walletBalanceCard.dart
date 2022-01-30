@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class walletBalancetotal extends StatelessWidget {
+class WalletBalancetotal extends StatelessWidget {
   final String profit;
   final String balance;
   final double change;
-  walletBalancetotal(this.profit, this.balance, this.change);
+  const WalletBalancetotal(this.profit, this.balance, this.change);
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class walletBalancetotal extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        Text('$change' + '%',
+                        Text('$change' '%',
                             style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.w500,
                                 color: change > 0 ? Colors.green : Colors.red)),

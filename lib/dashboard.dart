@@ -30,7 +30,7 @@ class Dashboard extends StatelessWidget {
             children: [
               const Padding(
                 padding: EdgeInsets.only(right: 28.0),
-                child: AppBAR(),
+                child: AppBAR(), //The App Bar of the App
               ),
               const SizedBox(height: 30),
               Padding(
@@ -39,10 +39,10 @@ class Dashboard extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Expanded(
+                      const Expanded(
                           flex: 8,
-                          child:
-                              walletBalancetotal('788.89', '24,600.80', 6.77)),
+                          child: WalletBalancetotal('788.89', '24,600.80',
+                              6.77)), //Renders the Total Balance CARD
                       const SizedBox(
                         width: 10,
                       ),
@@ -50,9 +50,9 @@ class Dashboard extends StatelessWidget {
                           flex: 2,
                           child: Container(
                             decoration: const BoxDecoration(
-                                color: const Color(0xff2B2A38),
-                                borderRadius:
-                                    const BorderRadius.all(const Radius.circular(20))),
+                                color: Color(0xff2B2A38),
+                                borderRadius: BorderRadius.all(
+                                    Radius.circular(20))),
                             child: IconButton(
                               padding: EdgeInsets.zero,
                               constraints: const BoxConstraints(),
@@ -91,7 +91,7 @@ class Dashboard extends StatelessWidget {
                         ))
                   ],
                 ),
-              ),
+              ), // HEADING MY WALLET and the View all Button
               SizedBox(
                 height: 150,
                 child: ListView.separated(
@@ -99,7 +99,7 @@ class Dashboard extends StatelessWidget {
                     itemBuilder: (context, items) => mywalletCoins[items],
                     separatorBuilder: (context, _) => const SizedBox(width: 10),
                     itemCount: mywalletCoins.length),
-              ),
+              ), //ListView Of the Coin list horizontalView
               Padding(
                 padding: const EdgeInsets.only(right: 28.0, top: 20, bottom: 5),
                 child: Row(
@@ -118,14 +118,18 @@ class Dashboard extends StatelessWidget {
                           'View all',
                           style: GoogleFonts.poppins(
                               color: const Color(0xff636272)),
-                        ))
+                        )) //Heading Recent Transaction and View all button
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 28.0),
+              const Padding(
+                padding: EdgeInsets.only(right: 28.0),
                 child: ExpandedcoinCard(
-                    6.77, 'images/btcicon.png', 'ETH', 'Ethereum', '3,475'),
+                    6.77,
+                    'images/btcicon.png',
+                    'ETH',
+                    'Ethereum',
+                    '3,475'), //Displays the Recent Transactions Card At last
               )
             ],
           ),
@@ -134,4 +138,3 @@ class Dashboard extends StatelessWidget {
     );
   }
 }
-
