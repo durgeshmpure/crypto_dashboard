@@ -87,47 +87,49 @@ class WalletBalancetotal extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(
                 top: 13.0, right: 10, left: 15, bottom: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Monthly Profit',
-                      style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w500,
-                          color: const Color(0xff636272)),
-                    ),
-                    Row(
-                      children: [
-                        Text('\$' + profit,
-                            style: GoogleFonts.poppins(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white)),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text('$change' '%',
-                            style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w500,
-                                color: change > 0 ? Colors.green : Colors.red)),
-                        Icon(
-                          change > 0
-                              ? Icons.keyboard_arrow_up_outlined
-                              : Icons.keyboard_arrow_down_outlined,
-                          color: change > 0 ? Colors.green : Colors.red,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-                IconButton(
-                    iconSize: 50,
-                    onPressed: () {},
-                    icon: Image.asset('images/icon3.png'))
-              ],
+            child: SingleChildScrollView(scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Monthly Profit',
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w500,
+                            color: const Color(0xff636272)),
+                      ),
+                      Row(
+                        children: [
+                          Text('\$' + profit,
+                              style: GoogleFonts.poppins(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white)),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text('$change' '%',
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w500,
+                                  color: change > 0 ? Colors.green : Colors.red)),
+                          Icon(
+                            change > 0
+                                ? Icons.keyboard_arrow_up_outlined
+                                : Icons.keyboard_arrow_down_outlined,
+                            color: change > 0 ? Colors.green : Colors.red,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  IconButton(
+                      iconSize: 50,
+                      onPressed: () {},
+                      icon: Image.asset('images/icon3.png'))
+                ],
+              ),
             ),
           ),
         )
