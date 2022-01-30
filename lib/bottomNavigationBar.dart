@@ -5,11 +5,11 @@ class BottomNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(height: 70,width:MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
           color: Color(0xff32323F),
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(15), topLeft: Radius.circular(15))),
+              topRight: Radius.circular(25), topLeft: Radius.circular(25))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
