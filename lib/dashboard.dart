@@ -14,7 +14,7 @@ class Dashboard extends StatelessWidget {
     final List<CoinCard> mywalletCoins = [
       const CoinCard('images/btcicon.png', 'BTC', 'Bitcoin', '786.9', 6.77),
       const CoinCard('images/dogeicon.png', 'ETH', 'Ethereum', '465.9', -6.77),
-      const CoinCard('images/hicon.png', 'ETH', 'Ethereum', '465.9', 5.00),
+      const CoinCard('images/hicon.png', 'LTC', 'Litecoin', '465.9', 5.00),
     ];
 
     return Scaffold(

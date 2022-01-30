@@ -87,7 +87,7 @@ class WalletBalancetotal extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(
                 top: 13.0, right: 10, left: 15, bottom: 10),
-            child: SingleChildScrollView(scrollDirection: Axis.horizontal,
+            child: SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -124,8 +124,8 @@ class WalletBalancetotal extends StatelessWidget {
                       )
                     ],
                   ),
-                  IconButton(
-                      iconSize: 50,
+                  IconButton(padding:EdgeInsets.zero,constraints: const BoxConstraints(maxHeight: 40,minHeight: 10),
+                      iconSize: 40,
                       onPressed: () {},
                       icon: Image.asset('images/icon3.png'))
                 ],

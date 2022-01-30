@@ -48,7 +48,7 @@ class CoinCard extends StatelessWidget {
                       style: GoogleFonts.poppins(color: Colors.white),
                     ),
                     Text(coinShort,
-                        style: GoogleFonts.poppins(color: Colors.white)),
+                        style: GoogleFonts.poppins(color: const Color(0xff636272))),
                   ],
                 )
               ],
@@ -62,7 +62,7 @@ class CoinCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Balance',
-                        style: GoogleFonts.poppins(color: Colors.white)),
+                        style: GoogleFonts.poppins(color: const Color(0xff636272))),
                     Text(balance,
                         style: GoogleFonts.poppins(color: Colors.white)),
                   ],
